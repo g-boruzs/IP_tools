@@ -25,6 +25,9 @@ calculate_network_ip() {
         fi
     done
 
+    # Append CIDR mask to the network address
+    network_address+="/$cidr"
+
     echo "$network_address"
 }
 
